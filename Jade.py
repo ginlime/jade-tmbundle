@@ -22,8 +22,11 @@ class JadeIndentCommand(TextCommand):
     def run(self, *args, **kwargs):
         indent = False
         sel = self.view.sel()
-        if len(sel) == 1:
-            pass
+        if len(sel) == 1 and self.view.rowcol(sel[0].begin())[1] != 0:
+            sel0 = sel[0]
+            pos = sel0.begin() - 1
+            if any(self.is_scope(pos, i) for i in ['entity.name.tag.jade', 'source.meta.function']):
+                indent = True
         snippet = "\n"
         if indent:
             snippet = "\n\t"
