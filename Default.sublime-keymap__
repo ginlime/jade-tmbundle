@@ -1,0 +1,25 @@
+[
+  // Indent line after a selector
+  {
+    "keys": ["enter"],
+    "command": "jade_indent",
+    "context": [
+      {
+        "key": "setting.auto_indent",
+        "operator": "equal",
+        "operand": true,
+        "match_all": true
+      }, {
+        "key": "selector",
+        "operator": "equal",
+        "operand": "text.jade",
+        "match_all": true
+      }, {
+        "key": "auto_complete_visible",
+        "operator": "equal",
+        "operand": false,
+        "match_all": true
+      }
+    ]
+  }
+]
