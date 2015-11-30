@@ -451,31 +451,80 @@
       "captures": { "1": { "name": "invalid.illegal.tag.jade" } },
       "name": "constant.language.js"
     },
+    "tag_attribute_name": {
+      "match": "\\s*([^\\s(),=/]+)",
+      "captures": { "1": { "name": "entity.other.attribute-name.tag.jade" } }
+    },
+    "tag_attribute_name_paren": {
+      "begin": "\\(",
+      "end": "\\)",
+      "name": "entity.other.attribute-name.tag.jade",
+      "patterns": [
+        { "include": "#tag_attribute_name_paren" },
+        { "include": "#tag_attribute_name" }
+      ]
+    },
     "tag_attributes": {
-      "begin": "(\\()",
+      "begin": "(\\(\\s*)",
       "captures": { "1": { "name": "constant.name.attribute.tag.jade" } },
       "end": "(\\))",
       "name": "meta.tag.other",
       "patterns": [
+        { "include": "#tag_attribute_name_paren" },
+        { "include": "#tag_attribute_name" },
         {
-          "match": "([^\\s(),=/]+)\\s*((?=\\))|,|\\s+|$)(?!\\!?\\=)",
-          "captures": { "1": { "name": "entity.other.attribute-name.tag.jade" } }
-        },
-        {
-          "begin": "([^\\s(),=/]*[^\\s(),=!/])\\s*(!?\\=)",
-          "beginCaptures": {
-            "1": { "name": "entity.other.attribute-name.tag.jade" },
-            "2": { "name": "punctuation.separator.key-value.jade" }
-          },
-          "end": "(,|$|(?=\\)|((?<![+/*|&=:^~!?<>%-])\\s+[^+/*|&=:^~!?<>%-])))",
+          "begin": "\\s*=\\s*(?=[\"'])",
+          "end": ",|$)",
+          "name": "debug",
           "patterns": [
             { "include": "#tag_attribute_value_paren" },
             { "include": "#tag_attribute_value_brackets" },
             { "include": "#tag_attribute_value_braces" },
-            { "include": "#string" },
-            { "include": "source.js" }
+            { "include": "#tag_attribute_value" }
           ]
         }
+      ]
+    },
+    "tag_attribute_value": {
+      "begin": "(?=(?:[!-+]?\\s*[\\w]+)|[\"'])",
+      "end": ",|$|(?=\\s+[^(),=/])|(?=\\))",
+      "name": "js.value.attribute.tag.jade",
+      "patterns": [
+        { "include": "#string" },
+        { "include": "source.js" }
+      ]
+    },
+    "tag_attribute_value_paren": {
+      "begin": "\\(",
+      "end": "\\)",
+      "name": "js.value.attribute.tag.jade",
+      "patterns": [
+        { "include": "#tag_attribute_value_paren" },
+        { "include": "#tag_attribute_value_brackets" },
+        { "include": "#tag_attribute_value_braces" },
+        { "include": "#tag_attribute_value" }
+      ]
+    },
+    "tag_attribute_value_brackets": {
+      "begin": "\\[",
+      "end": "\\]",
+      "name": "js.value.attribute.tag.jade",
+      "patterns": [
+        { "include": "#tag_attribute_value_paren" },
+        { "include": "#tag_attribute_value_brackets" },
+        { "include": "#tag_attribute_value_braces" },
+        { "include": "#tag_attribute_value" }
+      ]
+    },
+    "tag_attribute_value_braces": {
+      "begin": "\\{",
+      "end": "\\}",
+      "name": "js.value.attribute.tag.jade",
+      "patterns": [
+        { "include": "#tag_attribute_value_paren" },
+        { "include": "#tag_attribute_value_brackets" },
+        { "include": "#tag_attribute_value_braces" },
+        { "include": "#tag_attribute_value" }
       ]
     },
     "tag_mixin_attributes": {
@@ -488,42 +537,6 @@
           "match": "attributes(?=\\))",
           "name": "storage.type.keyword.jade"
         },
-        { "include": "source.js" }
-      ]
-    },
-    "tag_attribute_value_paren": {
-      "begin": "\\(",
-      "end": "\\)",
-      "name": "js.value.attribute.tag.jade",
-      "patterns": [
-        { "include": "#tag_attribute_value_paren" },
-        { "include": "#tag_attribute_value_brackets" },
-        { "include": "#tag_attribute_value_braces" },
-        { "include": "#string" },
-        { "include": "source.js" }
-      ]
-    },
-    "tag_attribute_value_brackets": {
-      "begin": "\\[",
-      "end": "\\]",
-      "name": "js.value.attribute.tag.jade",
-      "patterns": [
-        { "include": "#tag_attribute_value_paren" },
-        { "include": "#tag_attribute_value_brackets" },
-        { "include": "#tag_attribute_value_braces" },
-        { "include": "#string" },
-        { "include": "source.js" }
-      ]
-    },
-    "tag_attribute_value_braces": {
-      "begin": "\\{",
-      "end": "\\}",
-      "name": "js.value.attribute.tag.jade",
-      "patterns": [
-        { "include": "#tag_attribute_value_paren" },
-        { "include": "#tag_attribute_value_brackets" },
-        { "include": "#tag_attribute_value_braces" },
-        { "include": "#string" },
         { "include": "source.js" }
       ]
     },
