@@ -239,15 +239,6 @@
     }
   ],
   "repository": {
-    "brackets_js": {
-      "begin": "\\[",
-      "end": "\\]",
-      "name": "js.value.attribute.tag.jade",
-      "patterns": [
-        { "include": "#brackets_js" },
-        { "include": "source.js" }
-      ]
-    },
     "filter_args": {
       "begin": "\\G(\\()",
       "captures": {
@@ -294,7 +285,7 @@
       "comment": "- var name = 'value';",
       "comment": "name = function() {}",
       "patterns": [
-        { "include": "#brackets_js" },
+        { "include": "#js_brackets" },
         { "include": "source.js" }
       ]
     },
@@ -461,10 +452,11 @@
           "name": "attribute_value",
           "patterns": [
             { "include": "#string" },
-            { "include": "#tag_attribute_value" },
             { "include": "#js_parens" },
             { "include": "#js_brackets" },
-            { "include": "#js_braces" }
+            { "include": "#js_braces" },
+            { "include": "source.js" },
+            { "include": "#tag_attribute_value" }
           ]
         },
         {
@@ -616,7 +608,7 @@
       "end": "(?=\\])|$",
       "name": "source.js",
       "patterns": [
-        { "include": "#brackets_js" },
+        { "include": "#js_brackets" },
         { "include": "source.js" }
       ]
     },

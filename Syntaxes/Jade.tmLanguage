@@ -596,26 +596,6 @@
 			<key>name</key>
 			<string>meta.first-class.jade</string>
 		</dict>
-		<key>brackets_js</key>
-		<dict>
-			<key>begin</key>
-			<string>\[</string>
-			<key>end</key>
-			<string>\]</string>
-			<key>name</key>
-			<string>js.value.attribute.tag.jade</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#brackets_js</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.js</string>
-				</dict>
-			</array>
-		</dict>
 		<key>case_conds</key>
 		<dict>
 			<key>begin</key>
@@ -1254,7 +1234,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#brackets_js</string>
+					<string>#js_brackets</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -1396,10 +1376,6 @@
 						</dict>
 						<dict>
 							<key>include</key>
-							<string>#tag_attribute_value</string>
-						</dict>
-						<dict>
-							<key>include</key>
 							<string>#js_parens</string>
 						</dict>
 						<dict>
@@ -1409,6 +1385,14 @@
 						<dict>
 							<key>include</key>
 							<string>#js_braces</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.js</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#tag_attribute_value</string>
 						</dict>
 					</array>
 				</dict>
@@ -1582,7 +1566,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#brackets_js</string>
+					<string>#js_brackets</string>
 				</dict>
 				<dict>
 					<key>include</key>
