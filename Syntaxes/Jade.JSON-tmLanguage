@@ -455,8 +455,7 @@
             { "include": "#js_parens" },
             { "include": "#js_brackets" },
             { "include": "#js_braces" },
-            { "include": "source.js" },
-            { "include": "#tag_attribute_value" }
+            { "include": "source.js" }
           ]
         },
         {
@@ -484,17 +483,6 @@
       "patterns": [
         { "include": "#tag_attribute_name_paren" },
         { "include": "#tag_attribute_name" }
-      ]
-    },
-    "tag_attribute_value": {
-      "begin": "(?=[!-+~]?[\\w])",
-      "end": "$|(?=,|(?:\\s+[^!%&*-+~|<>:?/])|\\))",
-      "name": "js.value.attribute.tag.jade",
-      "patterns": [
-        { "include": "#js_parens" },
-        { "include": "#js_brackets" },
-        { "include": "#js_braces" },
-        { "include": "source.js" }
       ]
     },
     "tag_mixin_attributes": {

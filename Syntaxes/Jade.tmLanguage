@@ -1301,34 +1301,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>tag_attribute_value</key>
-		<dict>
-			<key>begin</key>
-			<string>(?=[!-+~]?[\w])</string>
-			<key>end</key>
-			<string>$|(?=,|(?:\s+[^!%&amp;*-+~|&lt;&gt;:?/])|\))</string>
-			<key>name</key>
-			<string>js.value.attribute.tag.jade</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#js_parens</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#js_brackets</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#js_braces</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.js</string>
-				</dict>
-			</array>
-		</dict>
 		<key>tag_attributes</key>
 		<dict>
 			<key>begin</key>
@@ -1389,10 +1361,6 @@
 						<dict>
 							<key>include</key>
 							<string>source.js</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#tag_attribute_value</string>
 						</dict>
 					</array>
 				</dict>
