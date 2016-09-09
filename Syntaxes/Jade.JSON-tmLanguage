@@ -28,6 +28,17 @@
       ]
     },
     {
+      "begin": "<!--",
+      "end": "--\\s*>",
+      "name": "comment.unbuffered.block.jade",
+      "patterns": [
+        {
+          "match": "--",
+          "name": "invalid.illegal.comment.comment.block.jade"
+        }
+      ]
+    },
+    {
       "begin": "^(\\s*)-$",
       "end": "^(?!(\\1\\s)|\\s*$)",
       "name": "source.js",
