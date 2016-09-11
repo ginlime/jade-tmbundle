@@ -359,12 +359,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>constant.id.tag.jade</string>
+					<string>entity.other.attribute-name.id.jade</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>constant.language.js</string>
+					<string>entity.other.attribute-name.class.jade</string>
 				</dict>
 				<key>4</key>
 				<dict>
