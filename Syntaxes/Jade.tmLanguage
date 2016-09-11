@@ -63,7 +63,7 @@
 			<key>end</key>
 			<string>--\s*&gt;</string>
 			<key>name</key>
-			<string>comment.buffered.block.jade</string>
+			<string>comment.unbuffered.block.jade</string>
 			<key>patterns</key>
 			<array>
 				<dict>
