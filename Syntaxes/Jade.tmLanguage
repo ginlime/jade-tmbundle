@@ -1323,14 +1323,14 @@
 			<key>match</key>
 			<string>\.([^\w-])?[\w-]*</string>
 			<key>name</key>
-			<string>constant.language.js</string>
+			<string>entity.other.attribute-name.class.jade</string>
 		</dict>
 		<key>tag_id</key>
 		<dict>
 			<key>match</key>
 			<string>#[\w-]+</string>
 			<key>name</key>
-			<string>constant.id.tag.jade</string>
+			<string>entity.other.attribute-name.id.jade</string>
 		</dict>
 		<key>tag_mixin_attributes</key>
 		<dict>

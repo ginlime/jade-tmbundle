@@ -393,12 +393,12 @@
     },
     "tag_id": {
       "match": "#[\\w-]+",
-      "name": "constant.id.tag.jade"
+      "name": "entity.other.attribute-name.id.jade"
     },
     "tag_classes": {
       "match": "\\.([^\\w-])?[\\w-]*",
       "captures": { "1": { "name": "invalid.illegal.tag.jade" } },
-      "name": "constant.language.js"
+      "name": "entity.other.attribute-name.class.jade"
     },
     "tag_attributes": {
       "begin": "(\\(\\s*)",
