@@ -49,7 +49,7 @@
     },
     {
       "begin": "^(\\s*)(script)((\\.$)|(?=[^\\n]*(text|application)/javascript.*\\.$))",
-      "beginCaptures": { "2": { "name": "entity.name.tag.script.jade" } },
+      "beginCaptures": { "2": { "name": "entity.name.tag.jade" } },
       "end": "^(?!(\\1\\s)|\\s*$)",
       "name": "meta.tag.other",
       "comment": "Script tag with JavaScript code.",
@@ -57,13 +57,11 @@
         {
           "begin": "\\G(?=\\()",
           "end": "$",
-          "name": "stuff.tag.script.jade",
           "patterns": [{ "include": "#tag_attributes" }]
         },
         {
           "begin": "\\G(?=[.#])",
           "end": "$",
-          "name": "stuff.tag.script.jade",
           "patterns": [{ "include": "#complete_tag" }]
         },
         { "include": "source.js" }
@@ -71,7 +69,7 @@
     },
     {
       "begin": "^(\\s*)(style)((\\.$)|(?=[.#(].*\\.$))",
-      "beginCaptures": { "2": { "name": "entity.name.tag.script.jade" } },
+      "beginCaptures": { "2": { "name": "entity.name.tag.jade" } },
       "end": "^(?!(\\1\\s)|\\s*$)",
       "name": "meta.tag.other",
       "comment": "Style tag with CSS code.",
@@ -79,13 +77,11 @@
         {
           "begin": "\\G(?=\\()",
           "end": "$",
-          "name": "stuff.tag.style.jade",
           "patterns": [{ "include": "#tag_attributes" }]
         },
         {
           "begin": "\\G(?=[.#])",
           "end": "$",
-          "name": "stuff.tag.style.jade",
           "patterns": [{ "include": "#complete_tag" }]
         },
         { "include": "source.css" }

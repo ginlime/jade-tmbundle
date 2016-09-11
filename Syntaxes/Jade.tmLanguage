@@ -99,7 +99,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.script.jade</string>
+					<string>entity.name.tag.jade</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -115,8 +115,6 @@
 					<string>\G(?=\()</string>
 					<key>end</key>
 					<string>$</string>
-					<key>name</key>
-					<string>stuff.tag.script.jade</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -130,8 +128,6 @@
 					<string>\G(?=[.#])</string>
 					<key>end</key>
 					<string>$</string>
-					<key>name</key>
-					<string>stuff.tag.script.jade</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -154,7 +150,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.script.jade</string>
+					<string>entity.name.tag.jade</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -170,8 +166,6 @@
 					<string>\G(?=\()</string>
 					<key>end</key>
 					<string>$</string>
-					<key>name</key>
-					<string>stuff.tag.style.jade</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -185,8 +179,6 @@
 					<string>\G(?=[.#])</string>
 					<key>end</key>
 					<string>$</string>
-					<key>name</key>
-					<string>stuff.tag.style.jade</string>
 					<key>patterns</key>
 					<array>
 						<dict>
