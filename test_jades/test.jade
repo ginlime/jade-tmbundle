@@ -4,6 +4,15 @@ doctype html
 _test  =  [{abc: "lalal"}]
 name = function() {}
 
+<!-- This is HTML comment. -->
+
+<!--[if IE 8]>
+<html lang="en" class="lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+html(lang="en")
+<!--<![endif]-->
+
 html
   head
     script#idscript.script(type="text/javascript",   qwerqwer)(test="123", lol=(1+
