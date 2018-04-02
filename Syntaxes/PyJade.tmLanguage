@@ -1406,7 +1406,7 @@
 			<key>match</key>
 			<string>\.([^\w-])?[\w-]*</string>
 			<key>name</key>
-			<string>constant.language.js</string>
+			<string>entity.other.attribute-name.class.css.jade</string>
 		</dict>
 		<key>tag_id</key>
 		<dict>
