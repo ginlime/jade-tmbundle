@@ -399,7 +399,7 @@
     "tag_classes": {
       "match": "\\.([^\\w-])?[\\w-]*",
       "captures": { "1": { "name": "invalid.illegal.tag.jade" } },
-      "name": "entity.other.attribute-name.class.jade"
+      "name": "entity.other.attribute-name.class.css.jade"
     },
     "tag_attributes": {
       "begin": "(\\(\\s*)",
